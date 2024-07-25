@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            background-color: #555;
+            color: #fff;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .profile {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .profile img {
+            width: 250px;
+            height: 180px;
+            border-radius: 200%;
+            transition: transform 0.3s ease-in-out;
+        }
+        .profile img:hover {
+            transform: scale(1.1);
+        }
+        .profile h1 {
+            margin: 10px 0 0;
+        }
+        .profile p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        .social-icons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #333;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+            transform: translateY(-5px);
+        }
+        .contact {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3; 
+        }
+        .contact h2 {
+            margin: 0 0 10px;
+        }
+        .contact p {
+            margin: 5px 0;
+        }
+        .projects {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+        .projects h2 {
+            text-align: center;
+        }
+        .projects .project {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fafafa;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .projects .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .projects .project .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .projects .project:hover .overlay {
+            opacity: 1;
+        }
+        .projects .project h3 {
+            margin-bottom: 10px;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="animate__animated animate__fadeInDown">
+        <h1>Meu Portfólio</h1>
+    </header>
+    <nav>
+        <a href="#profile" class="animate__animated animate__fadeInDown">Perfil</a>
+        <a href="#projects" class="animate__animated animate__fadeInDown">Projetos</a>
+        <a href="#contact" class="animate__animated animate__fadeInDown">Contato</a>
+    </nav>
+    <div class="container">
+        <section id="profile" class="profile animate__animated animate__fadeInUp">
+            <img src="imagens/fotoperfil.png.png" alt="Foto do Perfil">
+            <h1>Renan da Cunha Silva</h1>
+            <p>Desenvolvedor Web | Designer | Criador de Conteúdo</p>
+        </section>
+        <div class="social-icons animate__animated animate__fadeInUp">
+            <a href="https://www.linkedin.com/in/renan-cunha-6151552aa/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/RenanCunhaDev" target="_blank">GitHub</a>
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        </div>
+        <section id="projects" class="projects">
+            <h2>Projetos</h2>
+            <div class="project">
+                <h3>Projeto 1 <img height="150" width="150"  src="imagens/projeto1.png" alt="Meu primeiro projeto"></h3>
+                <p>O meu primeiro projeto é esse próprio Portfólio! Criado com HTML, CSS E JS. </p>
+                <div class="overlay">
+                    <div>
+                        <h3>Mais Detalhes</h3>
+                        <p>Detalhes adicionais do projeto 1.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Projeto 2</h3>
+                <p>Descrição do projeto 2.</p>
+                <div class="overlay">
+                    <div>
+                        <h3>Mais Detalhes</h3>
+                        <p>Detalhes adicionais do projeto 2.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Adicione mais projetos conforme necessário -->
+        </section>
+    </div>
+    <div class="contact" id="contact">
+        <h2>Contato</h2>
+        <p>Email: renan.silvace@gmail.com</p>
+        <p>Telefone: (85) 99733-3088</p>
+    </div>
+    <script>
+        // Script para adicionar a animação aos projetos conforme rolagem
+        document.addEventListener('DOMContentLoaded', function() {
+            const projects = document.querySelectorAll('.project');
+            const options = {
+                threshold: 0.5
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            projects.forEach(project => {
+                observer.observe(project);
+            });
+        });
+    </script>
+</body>
+</html>
